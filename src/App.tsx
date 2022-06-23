@@ -1,5 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import Router from "./Router";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -56,11 +57,11 @@ table {
 body {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color:white;
-  color:black;
+  background-color:${(props) => props.theme.bgColor};
+  color:${(props) => props.theme.textColor};
   line-height: 1.2;
   display: flex;
-  justify-content: center;
+  padding: 50px 100px;
 }
 a {
   text-decoration:none;
@@ -70,10 +71,10 @@ a {
 
 function App() {
   return (
-    <div>
+    <>
       <GlobalStyle />
-      <div>what</div>
-    </div>
+      <Router />
+    </>
   );
 }
 
