@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { coinIcon } from "../utils";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+`;
 const Title = styled.h1`
   color: ${(props) => props.theme.textColor};
   font-size: 100px;
@@ -34,7 +40,17 @@ const Img = styled.img`
   border-radius: 5px;
 `;
 
-const coinsArray = ["BTC", "ETH", "ADA", "XRP", "SOL", "DOT", "TRX"];
+const coinsArray = [
+  "BTC",
+  "ETH",
+  "ADA",
+  "XRP",
+  "SOL",
+  "DOT",
+  "TRX",
+  "MATIC",
+  "STORJ",
+];
 const Home = () => {
   return (
     <Wrapper>

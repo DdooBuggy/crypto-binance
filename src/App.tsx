@@ -67,6 +67,9 @@ a {
   text-decoration:none;
   color: inherit;
 }
+#root {
+  width: 100%;
+}
 `;
 
 function App() {
